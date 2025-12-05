@@ -1,70 +1,125 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="assets/banner.png" alt="NovaNews Banner" width="100%">
 
-## Available Scripts
+  # NovaNews
+  
+  **Your daily dose of news for free!**
 
-In the project directory, you can run:
+  <p>
+    <a href="https://reactjs.org/">
+      <img src="https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react" alt="React 18" />
+    </a>
+    <a href="https://getbootstrap.com/">
+      <img src="https://img.shields.io/badge/Bootstrap-5.x-purple?style=for-the-badge&logo=bootstrap" alt="Bootstrap 5" />
+    </a>
+    <a href="https://gnews.io/">
+      <img src="https://img.shields.io/badge/API-GNews-green?style=for-the-badge" alt="GNews API" />
+    </a>
+     <a href="LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
+    </a>
+  </p>
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📖 About
+**NovaNews** is a modern, React-based news aggregation application that delivers top headlines from around the world. Designed with a clean, responsive UI using Bootstrap 5, it offers a seamless reading experience across devices. Whether you're tracking business trends, catching up on sports, or looking for the latest tech updates, NovaNews has you covered.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features
 
-### `npm test`
+-   **📰 Top Headlines**: Real-time news updates across 7 major categories: Business, Entertainment, Health, Science, Sports, Technology, and General.
+-   **🎨 Dark/Light Mode**: Toggle between a sleek dark theme and a crisp light theme for comfortable reading in any lighting.
+-   **🎙️ Voice Commands & Text-to-Speech**: Navigate the app using voice commands (e.g., "Open Sports") and listen to articles with one-click text-to-speech.
+-   **⛅ Weather Widget**: Integrated real-time weather updates right in the navbar.
+-   **💾 Read Later**: Save articles to your personal "Saved" list to read them anytime, even offline.
+-   **🔍 Infinite Scroll**: Seamlessly load more news as you scroll (or use traditional pagination).
+-   **📱 Fully Responsive**: Optimized for mobile, tablet, and desktop views.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📸 Screenshots
 
-### `npm run build`
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <b>Light Mode</b><br>
+        <img src="assets/light_mode.png" alt="Light Mode Screenshot" width="400">
+      </td>
+      <td align="center">
+        <b>Dark Mode</b><br>
+        <img src="assets/dark_mode.png" alt="Dark Mode Screenshot" width="400">
+      </td>
+    </tr>
+  </table>
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   **Frontend**: React (Hooks, Functional Components, Context API), React Router v6.
+-   **Styling**: Bootstrap 5, CSS3, Glassmorphism effects.
+-   **API Integration**: [GNews API](https://gnews.io/) (News data), [Open-Meteo](https://open-meteo.com/) (Weather data).
+-   **Utilities**: `react-top-loading-bar` (Loading indicators), standard Web Speech API (Voice features).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Node.js (v14 or higher)
+-   npm (v6 or higher)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/newsapp.git
+    cd newsapp
+    ```
 
-## Learn More
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.  **Configure Environment Variables**
+    Create a `.env` file in the root directory and add your GNews API key:
+    ```env
+    REACT_APP_NEWS_API_KEY=your_api_key_here
+    ```
+    > **Note**: You can get a free API key from [GNews.io](https://gnews.io/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4.  **Run the application**
+    ```bash
+    npm start
+    ```
+    The app will launch in your browser at `http://localhost:3000`.
 
-### Code Splitting
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+newsapp/
+├── public/             # Static assets (ico, manifest, etc.)
+├── src/
+│   ├── components/     # Reusable React components
+│   │   ├── NavBar.js   # Navigation, Search, Voice, Dark Mode
+│   │   ├── News.js     # Main news feed logic
+│   │   ├── NewsItem.js # Individual news card
+│   │   ├── Spinner.js  # Loading spinner
+│   │   └── Ticker.js   # Breaking news ticker
+│   ├── App.js          # Root component & Routing
+│   ├── App.css         # Global styles & Variables
+│   └── index.js        # Entry point
+├── assets/             # Screenshots & Banner for README
+├── .env                # API Keys (gitignored)
+└── package.json        # Dependencies & Scripts
+```
 
-### Analyzing the Bundle Size
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+<div align="center">
+  Made with ❤️ by bbrak
+</div>
