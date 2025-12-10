@@ -1,8 +1,8 @@
 
 <div align="center">
-  <img src="assets/banner.png" alt="NewsMonkey Banner" width="100%">
+  <img src="assets/banner.png" alt="NovaNews Banner" width="100%">
 
-  # NewsMonkey
+  # NovaNews
   
   **Your daily dose of news for free!**
 
@@ -25,7 +25,7 @@
 ---
 
 ## 📖 About
-**NewsMonkey** is a modern, React-based news aggregation application that delivers top headlines from around the world. Designed with a clean, responsive UI using Bootstrap 5, it offers a seamless reading experience across devices. Whether you're tracking business trends, catching up on sports, or looking for the latest tech updates, NewsMonkey has you covered.
+**NovaNews** is a modern, React-based news aggregation application that delivers top headlines from around the world. Designed with a clean, responsive UI using Bootstrap 5, it offers a seamless reading experience across devices. Whether you're tracking business trends, catching up on sports, or looking for the latest tech updates, NovaNews has you covered.
 
 ## ✨ Key Features
 
