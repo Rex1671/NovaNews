@@ -1,125 +1,204 @@
 
+
+# ⭐ **NovaNews**
+
 <div align="center">
   <img src="assets/banner.png" alt="NovaNews Banner" width="100%">
 
-  # NovaNews
-  
-  **Your daily dose of news for free!**
+### **Your daily dose of news — fast, free, and beautifully delivered.**
 
   <p>
     <a href="https://reactjs.org/">
-      <img src="https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react" alt="React 18" />
+      <img src="https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react" />
     </a>
     <a href="https://getbootstrap.com/">
-      <img src="https://img.shields.io/badge/Bootstrap-5.x-purple?style=for-the-badge&logo=bootstrap" alt="Bootstrap 5" />
+      <img src="https://img.shields.io/badge/Bootstrap-5.x-purple?style=for-the-badge&logo=bootstrap" />
     </a>
     <a href="https://gnews.io/">
-      <img src="https://img.shields.io/badge/API-GNews-green?style=for-the-badge" alt="GNews API" />
+      <img src="https://img.shields.io/badge/API-GNews-green?style=for-the-badge" />
     </a>
-     <a href="LICENSE">
-      <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
+    <a href="LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
+    </a>
+  </p>
+
+  <p>
+    🚀 **Live Demo:**  
+    <a href="https://rex1671.github.io/NovaNews/" target="_blank">
+      <img src="https://img.shields.io/badge/Click Here-Live Demo-brightgreen?style=for-the-badge" />
     </a>
   </p>
 </div>
 
 ---
 
-## 📖 About
-**NovaNews** is a modern, React-based news aggregation application that delivers top headlines from around the world. Designed with a clean, responsive UI using Bootstrap 5, it offers a seamless reading experience across devices. Whether you're tracking business trends, catching up on sports, or looking for the latest tech updates, NovaNews has you covered.
+## 📖 **About**
 
-## ✨ Key Features
+**NovaNews** is a clean, fast, and modern news aggregation web app built with **React**. It fetches real-time top headlines from the **GNews API**, presented in a smooth and responsive UI powered by **Bootstrap 5**.
 
--   **📰 Top Headlines**: Real-time news updates across 7 major categories: Business, Entertainment, Health, Science, Sports, Technology, and General.
--   **🎨 Dark/Light Mode**: Toggle between a sleek dark theme and a crisp light theme for comfortable reading in any lighting.
--   **🎙️ Voice Commands & Text-to-Speech**: Navigate the app using voice commands (e.g., "Open Sports") and listen to articles with one-click text-to-speech.
--   **⛅ Weather Widget**: Integrated real-time weather updates right in the navbar.
--   **💾 Read Later**: Save articles to your personal "Saved" list to read them anytime, even offline.
--   **🔍 Infinite Scroll**: Seamlessly load more news as you scroll (or use traditional pagination).
--   **📱 Fully Responsive**: Optimized for mobile, tablet, and desktop views.
+Whether you’re keeping up with global events, sports, tech, entertainment, or science—NovaNews delivers everything in one elegant interface.
 
-## 📸 Screenshots
+---
+
+## ✨ **Key Features**
+
+### 📰 **Top Headlines**
+
+Stay up to date with real-time news across 7 major categories:
+
+* Business
+* Entertainment
+* Health
+* Science
+* Sports
+* Technology
+* General
+
+### 🌗 **Dark / Light Mode**
+
+Switch themes instantly for comfortable reading anytime.
+
+### 🎙️ **Voice Commands + Text-to-Speech**
+
+* Say **“Open Sports”**, “Show Technology”, etc.
+* Listen to any article with built-in TTS.
+
+### ⛅ **Live Weather Widget**
+
+Shows your city's weather right inside the navbar.
+
+### 💾 **Read Later / Save Articles**
+
+Save articles for offline access anytime.
+
+### 🔄 **Infinite Scroll**
+
+Auto-load new articles as you scroll down (or use pagination mode).
+
+### 📱 **Fully Responsive Design**
+
+Feels smooth on:
+
+* Mobile
+* Tablet
+* Desktop
+
+---
+
+## 📸 **Screenshots**
 
 <div align="center">
   <table>
     <tr>
       <td align="center">
         <b>Light Mode</b><br>
-        <img src="assets/light_mode.png" alt="Light Mode Screenshot" width="400">
+        <img src="assets/light_mode.png" width="400">
       </td>
       <td align="center">
         <b>Dark Mode</b><br>
-        <img src="assets/dark_mode.png" alt="Dark Mode Screenshot" width="400">
+        <img src="assets/dark_mode.png" width="400">
       </td>
     </tr>
   </table>
 </div>
 
-## 🛠️ Tech Stack
+---
 
--   **Frontend**: React (Hooks, Functional Components, Context API), React Router v6.
--   **Styling**: Bootstrap 5, CSS3, Glassmorphism effects.
--   **API Integration**: [GNews API](https://gnews.io/) (News data), [Open-Meteo](https://open-meteo.com/) (Weather data).
--   **Utilities**: `react-top-loading-bar` (Loading indicators), standard Web Speech API (Voice features).
+## 🛠️ **Tech Stack**
 
-## 🚀 Getting Started
+### **Frontend**
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+* React (Hooks, Functional Components)
+* React Router v6
+* Context API for global theme + saved items
 
-### Prerequisites
+### **Styling**
 
--   Node.js (v14 or higher)
--   npm (v6 or higher)
+* Bootstrap 5
+* CSS3
+* Smooth glassmorphism UI
 
-### Installation
+### **APIs**
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/your-username/newsapp.git
-    cd newsapp
-    ```
+* **GNews API** – News data
+* **Open-Meteo** – Weather data
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+### **Utilities**
 
-3.  **Configure Environment Variables**
-    Create a `.env` file in the root directory and add your GNews API key:
-    ```env
-    REACT_APP_NEWS_API_KEY=your_api_key_here
-    ```
-    > **Note**: You can get a free API key from [GNews.io](https://gnews.io/).
+* `react-top-loading-bar` — loading animations
+* Web Speech API — voice commands & text-to-speech
 
-4.  **Run the application**
-    ```bash
-    npm start
-    ```
-    The app will launch in your browser at `http://localhost:3000`.
+---
 
-## 📂 Project Structure
+## 🚀 **Getting Started**
+
+### ✔ Prerequisites
+
+* **Node.js** v14+
+* **npm** v6+
+
+### ✔ Installation
+
+#### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/your-username/newsapp.git
+cd newsapp
+```
+
+#### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+#### 3️⃣ Create a `.env` file
+
+```env
+REACT_APP_NEWS_API_KEY=your_api_key_here
+```
+
+👉 Get your API key from **[https://gnews.io/](https://gnews.io/)**
+
+#### 4️⃣ Run the dev server
+
+```bash
+npm start
+```
+
+Your app will open at: **[http://localhost:3000](http://localhost:3000)**
+
+---
+
+## 📂 **Project Structure**
 
 ```bash
 newsapp/
-├── public/             # Static assets (ico, manifest, etc.)
+├── public/             # Static files
 ├── src/
-│   ├── components/     # Reusable React components
-│   │   ├── NavBar.js   # Navigation, Search, Voice, Dark Mode
-│   │   ├── News.js     # Main news feed logic
-│   │   ├── NewsItem.js # Individual news card
-│   │   ├── Spinner.js  # Loading spinner
-│   │   └── Ticker.js   # Breaking news ticker
-│   ├── App.js          # Root component & Routing
-│   ├── App.css         # Global styles & Variables
-│   └── index.js        # Entry point
-├── assets/             # Screenshots & Banner for README
-├── .env                # API Keys (gitignored)
-└── package.json        # Dependencies & Scripts
+│   ├── components/     # Reusable components
+│   │   ├── NavBar.js
+│   │   ├── News.js
+│   │   ├── NewsItem.js
+│   │   ├── Spinner.js
+│   │   └── Ticker.js
+│   ├── App.js          # Main app router
+│   ├── App.css         # Global styles
+│   └── index.js        # React entry point
+├── assets/             # Screenshots & banner
+├── .env                # API key (ignored in Git)
+└── package.json
 ```
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+
+## 📄 **License**
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file.
 
 ---
+
 <div align="center">
-  Made with ❤️ by Rakesh
+  Made with ❤️ by <b>Rakesh</b><br>
+  ⭐ If you like this project, consider giving it a star on GitHub!
 </div>
