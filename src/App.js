@@ -6,9 +6,7 @@ import LoadingBar from "react-top-loading-bar";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-// Using a Wrapper to use Hooks in Class Component for Dark Mode or similar if needed, 
-// but easier to convert App to functional or manage state here.
-// I will keep Class component to minimize refactor risk, but add State for Mode.
+
 
 export default class App extends Component {
   state = {
@@ -17,7 +15,6 @@ export default class App extends Component {
     isListening: false
   }
 
-  // Set Default Body Theme
   componentDidMount() {
     document.body.setAttribute('data-theme', 'light');
   }
@@ -34,13 +31,11 @@ export default class App extends Component {
 
   toggleVoice = () => {
     this.setState({ isListening: !this.state.isListening });
-    // Voice Logic Placeholder: In a real app, SpeechRecognition would start here.
     if (!this.state.isListening) {
       alert("Voice Command Activated! (Simulation: Say 'Sports' to navigate)");
     }
   }
 
-  // Dummy headlines for Ticker
   headlines = [
     { title: "Bitcoin hits new all-time high!" },
     { title: "SpaceX successfully lands Starship." },
@@ -72,10 +67,7 @@ export default class App extends Component {
           <Route exact path="/science" element={<News setProgress={this.setProgress} key="science" category="science" />} />
           <Route exact path="/sports" element={<News setProgress={this.setProgress} key="sports" category="sports" />} />
           <Route exact path="/technology" element={<News setProgress={this.setProgress} key="technology" category="technology" />} />
-          {/* Saved Route - Reusing News but with a 'saved' prop/category? 
-              Actually, News component needs update to handle 'saved' mode. 
-              Let's pass a special prop 'savedMode={true}'
-          */}
+    
           <Route exact path="/saved" element={<News setProgress={this.setProgress} key="saved" savedMode={true} />} />
         </Routes>
       </Router>
