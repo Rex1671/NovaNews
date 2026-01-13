@@ -4,7 +4,6 @@ const NewsItem = (props) => {
   const { title, description, imageUrl, newsUrl, author, date, source } = props;
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isSaved, setIsSaved] = useState(() => {
-    // Check if saved
     const saved = localStorage.getItem('savedNews');
     if (saved) {
       const parsed = JSON.parse(saved);
@@ -13,11 +12,9 @@ const NewsItem = (props) => {
     return false;
   });
 
-  // Reading Time Estimate (Avg 200 words/min)
   const words = (description + " " + title).split(" ").length;
   const readTime = Math.ceil(words / 200);
 
-  // Text-to-Speech
   const handleSpeak = () => {
     if (isSpeaking) {
       window.speechSynthesis.cancel();
@@ -30,22 +27,18 @@ const NewsItem = (props) => {
     }
   };
 
-  // Handle Save/Bookmark
   const handleSave = () => {
     let saved = JSON.parse(localStorage.getItem('savedNews') || "[]");
     if (isSaved) {
-      // Remove
       saved = saved.filter(item => item.url !== newsUrl);
       setIsSaved(false);
     } else {
-      // Add
       saved.push({ title, description, imageUrl, newsUrl, author, date, source });
       setIsSaved(true);
     }
     localStorage.setItem('savedNews', JSON.stringify(saved));
   };
 
-  // Share
   const handleShare = async () => {
     if (navigator.share) {
       try {
