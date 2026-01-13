@@ -6,7 +6,6 @@ const NavBar = (props) => {
     const [searchText, setSearchText] = useState("");
     const navigate = useNavigate();
 
-    // Voice Command Logic
     useEffect(() => {
         let recognition = null;
         if (props.isListening) {
@@ -29,16 +28,15 @@ const NavBar = (props) => {
                     else if (transcript.includes("technology")) navigate("/technology");
                     else if (transcript.includes("saved") || transcript.includes("book")) navigate("/saved");
                     else if (transcript.includes("search")) {
-                        // "Search for bitcoin" -> extract bitcoin
                         const query = transcript.replace("search", "").replace("for", "").trim();
                         if (query) navigate(`/?q=${query}`);
                     }
 
-                    props.toggleVoice(); // Stop listening after command
+                    props.toggleVoice(); 
                 };
 
                 recognition.onend = () => {
-                    if (props.isListening) props.toggleVoice(); // Stop if silence/end
+                    if (props.isListening) props.toggleVoice(); 
                 };
 
                 recognition.start();
@@ -51,10 +49,8 @@ const NavBar = (props) => {
         return () => {
             if (recognition) recognition.stop();
         };
-        // eslint-disable-next-line
     }, [props.isListening]);
 
-    // Fetch Weather
     useEffect(() => {
         const fetchWeather = async () => {
             try {
@@ -93,7 +89,6 @@ const NavBar = (props) => {
                     <span style={{ color: 'var(--primary-color)' }}>Nova</span><span style={{ color: 'var(--text-color)' }}>News</span>
                 </Link>
 
-                {/* Weather Widget */}
                 <div className="weather-widget d-none d-lg-flex">
                     <span className="weather-icon">{weather.icon}</span>
                     <span>{weather.temp}°C</span>
@@ -118,7 +113,6 @@ const NavBar = (props) => {
                     </ul>
 
                     <div className="d-flex align-items-center">
-                        {/* Dark Mode Toggle */}
                         <div className="form-check form-switch me-3 d-flex align-items-center">
                             <input className="form-check-input" type="checkbox" id="darkModeSwitch"
                                 checked={props.mode === 'dark'} onChange={props.toggleMode} style={{ cursor: 'pointer' }} />
@@ -127,12 +121,10 @@ const NavBar = (props) => {
                             </label>
                         </div>
 
-                        {/* Voice Command Button */}
                         <button className={`mic-btn me-3 ${props.isListening ? 'listening' : ''}`} onClick={props.toggleVoice} title="Voice Command">
                             🎙️
                         </button>
 
-                        {/* Search Form */}
                         <form className="d-flex" role="search" onSubmit={handleSearch}>
                             <input className="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
                                 value={searchText} onChange={(e) => setSearchText(e.target.value)} />
