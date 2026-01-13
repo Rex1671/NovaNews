@@ -10,7 +10,6 @@ const News = (props) => {
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
 
-  // Get query params for Search
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get('q');
@@ -20,7 +19,6 @@ const News = (props) => {
     setLoading(true);
 
     if (props.savedMode) {
-      // Saved News Mode
       const saved = JSON.parse(localStorage.getItem('savedNews') || "[]");
       setArticles(saved);
       setLoading(false);
@@ -32,10 +30,8 @@ const News = (props) => {
     let url = "";
 
     if (searchQuery) {
-      // Search Mode
       url = `https://gnews.io/api/v4/search?q=${searchQuery}&lang=en&country=in&apikey=${process.env.REACT_APP_NEWS_API_KEY}`;
     } else {
-      // Category Mode
       url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&lang=en&country=${props.country}&page=${page}&max=${props.pageSize}&apikey=${process.env.REACT_APP_NEWS_API_KEY}`;
     }
 
@@ -47,7 +43,6 @@ const News = (props) => {
         setArticles(parsedData.articles);
         setTotalResults(parsedData.totalArticles);
       } else {
-        // Handle error or empty
         setArticles([]);
       }
     } catch (e) {
@@ -60,7 +55,6 @@ const News = (props) => {
 
   useEffect(() => {
     updateNews();
-    // eslint-disable-next-line
   }, [page, props.category, searchQuery, props.savedMode]);
 
   const handleNext = () => {
