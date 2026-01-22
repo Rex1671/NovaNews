@@ -142,7 +142,7 @@ Feels smooth on:
 #### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/Rex1671/newsapp.git
+git clone https://github.com/Rex1671/NovaNews.git
 cd newsapp
 ```
 
