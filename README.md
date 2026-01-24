@@ -24,7 +24,7 @@
 
   <p>
     🚀 **Live Demo:**  
-    <a href="https://rex1671.github.io/NovaNews/" target="_blank">
+    <a href="https://novanews-five.vercel.app/" target="_blank">
       <img src="https://img.shields.io/badge/Click Here-Live Demo-brightgreen?style=for-the-badge" />
     </a>
   </p>
